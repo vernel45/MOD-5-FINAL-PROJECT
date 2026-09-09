@@ -3,7 +3,24 @@ const searchInput = document.getElementById("searchInput");
 const searchButton = document.getElementById("searchButton");
 
 searchButton.addEventListener("click", () => {
-  getMovies(searchInput.value);
+    const searchTerm = searchInput.value.trim();
+
+if (!searchTerm) {
+  results.innerHTML = "<h2>Please enter a movie title.</h2>";
+  return;
+}
+
+getMovies(searchTerm);
+ });
+
+ searchInput.addEventListener("keydown", (event) => {
+ if (event.key === "Enter") {
+    const searchTerm = searchInput.value.trim();
+    if (!searchTerm) {
+        results.innerHTML = "<h2> Please add a movie title</h2>";
+    }
+    getMovies(searchTerm);
+ }
 });
 
 async function getMovies(searchTerm) {
@@ -12,7 +29,11 @@ async function getMovies(searchTerm) {
   );
 
   const data = await response.json();
-  console.log(data.Search);
+if (data.Response === "False") {
+  results.innerHTML = `<h2>${data.Error}</h2>`;
+  return;
+}
+  console.log(data);
 
   const movies = data.Search;
 
