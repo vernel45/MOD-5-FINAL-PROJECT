@@ -12,7 +12,7 @@ searchButton.addEventListener("click", () => {
   }
 
   getMovies(searchTerm);
-  nameWrapper.innerHTML = searchTerm;
+  
 });
 
 searchInput.addEventListener("keydown", (event) => {
@@ -26,6 +26,7 @@ searchInput.addEventListener("keydown", (event) => {
 });
 
 async function getMovies(searchTerm) {
+  nameWrapper.innerHTML = searchTerm;
   const response = await fetch(
     `https://www.omdbapi.com/?apikey=2ade860f&s=${searchTerm}`,
   );

@@ -5,24 +5,36 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Movies Library</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
   </head>
     <body>
     <div id="app">
-      <nav class="navbar">
-        <h1>Movies Library</h1>
-      </nav>
+      <header class="header">
+  <nav class="navbar">
+    <div class="logo">
+      <img src="./assets/blinker-icon.4f9b2663.png" alt="Blinker logo">      
+    </div>
+    <ul class="nav__links">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Find Your Movie</a></li>
+      <li><a href="#" class="nav__btn">CONTACT</a></li>
+    </ul>
+  </nav>
 
-      <section class="search">
-        <input
-          type="text"
-          id="searchInput"
-          placeholder="Search for a movie..."
-        />
-        <button id="searchButton">Search</button>
-      </section>
+  <div class="search">
+    <h1>Browse our movies</h1>
+    <div class="search__bar">
+      <input type="text" id="searchInput" placeholder="Search by Name and find the best...">
+      <button id="searchButton"><i class="fas fa-search"></i></button>
+    </div>
+  </div>
+</header>
 
-      <h2 class="searchName"></h2>
-      <main id="results"></main>
+<section class="results__section">
+  <h2 class="results__title">Search results: <span class="searchName"></span></h2>
+  <main id="results"></main>
+</section>
     </div>
 
     <script src="./index.js"></script>
