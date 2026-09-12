@@ -61,3 +61,11 @@ results.innerHTML = movies
     `;
   }).slice(0, 6)  .join("");
 }
+
+let menuOpen = false;
+
+function toggleMenu () {
+  menuOpen = !menuOpen;
+  const menu = document.getElementById("menu");
+  menu.style.display = menuOpen ? "flex" : "none";
+}
