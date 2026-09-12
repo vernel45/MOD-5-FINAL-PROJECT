@@ -217,12 +217,12 @@ body {
     gap: 24px;
   }
 
-  .h1 {
-    font-size: 24px;
+  .title {
+    font-size: 18px;
     flex-direction: column;
   }
 
-   .search {
+  .search {
     width: 100%;
     padding: 0 20px;
     margin-top: 40px;
@@ -241,22 +241,16 @@ body {
   .search__bar {
     width: 100%;
     max-width: 550px;
-
     height: 60px;
-
     margin: 0 auto;
     padding: 0 18px;
-
     box-sizing: border-box;
   }
 
   .search__bar input {
     width: 100%;
-    min-width: 0;
-
     font-size: 18px;
     padding: 10px;
-
     box-sizing: border-box;
   }
 
@@ -264,6 +258,4 @@ body {
     font-size: 24px;
     padding: 8px;
   }
-
-
 }
